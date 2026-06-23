@@ -10,7 +10,7 @@ export const useTestSeries = () => {
   const error = useAppSelector(selectTestError);
   const pagination = useAppSelector(selectTestPagination);
 
-  const [filters, setFilters] = useState<{ category?: string; subject?: string; difficulty?: string; search?: string; page?: number; limit?: number }>({ page: 1, limit: 500 });
+  const [filters, setFilters] = useState<{ category?: string; subject?: string; difficulty?: string; search?: string; testType?: string; page?: number; limit?: number }>({ page: 1, limit: 500, testType: 'full' });
   const filtersRef = useRef(filters);
   filtersRef.current = filters;
 

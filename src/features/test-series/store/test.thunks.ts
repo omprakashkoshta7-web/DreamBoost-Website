@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { fetchTests as fetchTestsApi, fetchTest as fetchTestApi, submitTest as submitTestApi, fetchCompletedCategories as fetchCompletedCategoriesApi } from '../services/api';
 
-export const fetchTests = createAsyncThunk<any, { category?: string; subject?: string; difficulty?: string; search?: string; page?: number; limit?: number }, { rejectValue: string }>(
+export const fetchTests = createAsyncThunk<any, { category?: string; subject?: string; difficulty?: string; search?: string; testType?: string; page?: number; limit?: number }, { rejectValue: string }>(
   'tests/fetchTests',
   async (params, { rejectWithValue }) => {
     try { return await fetchTestsApi(params); }

@@ -1,6 +1,6 @@
 import apiClient from '@shared/utils/apiClient';
 
-export const fetchTests = async (params: { category?: string; subject?: string; difficulty?: string; search?: string; page?: number; limit?: number }) => {
+export const fetchTests = async (params: { category?: string; subject?: string; difficulty?: string; search?: string; testType?: string; page?: number; limit?: number }) => {
   const response = await apiClient.get('/tests', { params });
   return response.data.data;
 };
