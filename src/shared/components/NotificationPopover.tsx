@@ -77,7 +77,7 @@ const NotificationPopover: React.FC<NotificationPopoverProps> = ({ onClose }) =>
   return (
     <>
       <div className="fixed inset-0 z-40" onClick={onClose} />
-      <div ref={popoverRef} className="absolute mt-2 left-3 right-3 sm:left-auto sm:right-0 sm:w-80 bg-white rounded-2xl shadow-2xl border border-tb-gray-200/60 z-50 overflow-hidden animate-slide-up">
+      <div ref={popoverRef} className="fixed mt-2 right-3 sm:right-4 top-14 w-[calc(100%-24px)] sm:w-80 max-w-sm bg-white rounded-2xl shadow-2xl border border-tb-gray-200/60 z-50 overflow-hidden animate-slide-up">
         <div className="flex items-center justify-between px-4 py-3 border-b border-tb-gray-100">
           <div className="flex items-center gap-2">
             <Bell className="w-4 h-4 text-tb-blue" />
