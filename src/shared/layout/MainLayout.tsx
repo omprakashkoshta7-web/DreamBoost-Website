@@ -77,11 +77,11 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
     <div className="min-h-screen flex flex-col bg-white dark:bg-gray-950 dark:text-gray-100 overflow-x-hidden">
       {/* Top Navbar - Testbook Style */}
       <nav className="sticky top-0 z-50 bg-white shadow-tb border-b border-tb-gray-200/60">
-        <div className="max-w-7xl mx-auto px-3 sm:px-5">
-          <div className="flex items-center justify-between h-16">
+        <div className="max-w-7xl mx-auto px-2 sm:px-5">
+          <div className="flex items-center justify-between h-14 sm:h-16">
             {/* Logo */}
-            <Link to="/app/dashboard" className="-ml-2 flex-shrink-0">
-              <BrandLogo logoClassName="h-16 w-[18rem] object-cover object-left" textClassName="hidden" />
+            <Link to="/app/dashboard" className="flex-shrink-0">
+              <BrandLogo logoClassName="h-10 w-[10rem] sm:h-12 sm:w-[14rem] md:h-14 md:w-[16rem] lg:h-16 lg:w-[18rem] object-cover object-left" textClassName="hidden" />
             </Link>
 
             {/* Desktop Nav Links */}
@@ -105,14 +105,14 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
             </div>
 
             {/* Right Side */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1 sm:gap-2">
               {isAuthenticated ? (
                 <>
                   {/* Notifications */}
                   <div className="relative">
                     <button
                       onClick={() => setNotificationOpen(!notificationOpen)}
-                      className="relative p-2 rounded-md hover:bg-tb-gray-100 text-tb-gray-500 transition-colors"
+                      className="relative p-1.5 sm:p-2 rounded-md hover:bg-tb-gray-100 text-tb-gray-500 transition-colors"
                     >
                       <Bell className="w-5 h-5" />
                       <span className="absolute top-1 right-1 w-2 h-2 bg-tb-red rounded-full"></span>
@@ -135,13 +135,13 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() => navigate('/?auth=login')}
-                    className="px-4 py-2 text-sm font-medium text-tb-blue border border-tb-blue rounded-md hover:bg-tb-blue-light transition-colors"
+                    className="px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-tb-blue border border-tb-blue rounded-md hover:bg-tb-blue-light transition-colors"
                   >
                     Login
                   </button>
                   <button
                     onClick={() => navigate('/?auth=register')}
-                    className="px-4 py-2 text-sm font-medium text-white bg-tb-orange rounded-md hover:bg-tb-orange-hover transition-colors"
+                    className="px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-white bg-tb-orange rounded-md hover:bg-tb-orange-hover transition-colors"
                   >
                     Sign Up
                   </button>
@@ -151,7 +151,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="md:hidden p-2 rounded-md hover:bg-tb-gray-100 text-tb-gray-500"
+                className="md:hidden p-1.5 sm:p-2 rounded-md hover:bg-tb-gray-100 text-tb-gray-500"
               >
                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
@@ -207,12 +207,12 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
       </nav>
 
       {/* Page Content */}
-      <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 py-6 w-full">
+      <main className="flex-1 max-w-7xl mx-auto px-3 sm:px-6 py-4 sm:py-6 w-full">
         {children}
       </main>
 
       {/* Footer - Testbook Style */}
-      <footer className="bg-tb-navy text-white">
+      <footer className="hidden sm:block bg-tb-navy text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>

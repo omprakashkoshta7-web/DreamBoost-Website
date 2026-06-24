@@ -79,7 +79,7 @@ const ChatbotWidget: React.FC = () => {
     <>
       {open && (
         <div
-          className="fixed bottom-20 sm:bottom-24 right-3 left-3 sm:left-auto z-50 flex w-auto sm:w-[380px] flex-col rounded-2xl bg-white shadow-[0_8px_40px_rgba(0,0,0,0.15),0_0_0_1px_rgba(0,0,0,0.04)] animate-slide-up origin-bottom-right"
+          className="fixed bottom-16 sm:bottom-24 right-3 left-3 sm:left-auto z-50 flex w-auto sm:w-[380px] flex-col rounded-2xl bg-white shadow-[0_8px_40px_rgba(0,0,0,0.15),0_0_0_1px_rgba(0,0,0,0.04)] animate-slide-up origin-bottom-right"
           style={{ maxHeight: 'calc(100vh - 120px)' }}
         >
           {/* Header */}
@@ -179,7 +179,7 @@ const ChatbotWidget: React.FC = () => {
       )}
 
       {/* Floating button */}
-      <div className="fixed bottom-20 right-3 sm:bottom-6 sm:right-6 z-50 flex items-center gap-3">
+      <div className="fixed bottom-4 right-3 sm:bottom-6 sm:right-6 z-50 flex items-center gap-3">
         {!open && (
           <div className="hidden sm:flex animate-fade-in items-center gap-2.5 rounded-full bg-white px-4 py-2 shadow-[0_4px_16px_rgba(0,0,0,0.1)] ring-1 ring-gray-100">
             <span className="relative flex h-2 w-2">
